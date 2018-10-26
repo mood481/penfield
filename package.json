@@ -1,0 +1,13 @@
+{
+    "name": "penfield",
+    "version": "0.0.1",
+    "description": "Penfield",
+    "license": "GPL-3.0-only",
+    "scripts": {
+        "start": "docker-compose up -d",
+        "stop": "docker-compose down -v",
+        "restart": "npm stop && sleep 1 && npm start",
+        "logs": "docker-compose logs -f"
+    },
+    "devDependencies": {}
+}
