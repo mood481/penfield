@@ -1,0 +1,12 @@
+# general
+**/node_modules
+**/dist
+**/test
+
+# app
+_containers/database
+_tmp
+api/.env
+
+# ides
+.idea/
