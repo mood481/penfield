@@ -25,3 +25,13 @@ services:
     volumes:
     - ./_containers/database:/var/lib/mysql
     command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
+
+  api_module:
+    image: doncicuto/node_lts_dockerize_nodemon:carbon
+    command: bash -c "dockerize -wait tcp://mariadb:3306 -timeout 1m && npm install && npm run start:dev"
+    working_dir: /app
+    restart: always
+    volumes:
+    - ./api:/app
+    ports:
+    - "5000:3000"
