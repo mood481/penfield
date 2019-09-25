@@ -3,9 +3,8 @@
     "",
     "\\api",
     "\\api\\src",
-    "\\api\\src\\common",
-    "\\_containers",
-    "\\_containers\\certs"
+    "\\api\\src\\user",
+    "\\apps"
   ],
   "SelectedNode": "\\api\\src\\main.ts",
   "PreviewInSolutionExplorer": false
