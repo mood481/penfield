@@ -9,5 +9,11 @@
         "restart": "npm stop && sleep 1 && npm start",
         "logs": "docker-compose logs -f"
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "dependencies": {
+        "@nestjs/platform-express": "^6.7.2",
+        "@nestjs/platform-fastify": "^6.7.2",
+        "@nestjs/platform-socket.io": "^6.7.2",
+        "@nestjs/platform-ws": "^6.7.2"
+    }
 }
