@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\api",
-    "\\api\\src",
-    "\\_containers",
-    "\\_containers\\certs"
+    "\\api\\src"
   ],
-  "SelectedNode": "\\api\\package.json",
+  "SelectedNode": "\\api\\src\\main.ts",
   "PreviewInSolutionExplorer": false
 }
