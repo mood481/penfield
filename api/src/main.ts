@@ -41,7 +41,8 @@ async function bootstrap() {
     });
 
     app.setGlobalPrefix(ROUTE_PREFIX);
-    await app.listen(PORT);
+    //await app.listen(PORT);
+    await app.listen(3000);
 
     // HMR
     /*
