@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\api",
-    "\\api\\src",
-    "\\_containers"
+    "\\api\\src"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\api\\src\\main.ts",
   "PreviewInSolutionExplorer": false
 }
