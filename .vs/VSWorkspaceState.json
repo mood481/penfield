@@ -3,9 +3,8 @@
     "",
     "\\api",
     "\\api\\src",
-    "\\api\\src\\user",
-    "\\apps"
+    "\\_containers"
   ],
-  "SelectedNode": "\\api\\src\\main.ts",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

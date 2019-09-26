@@ -11,3 +11,4 @@ api/swagger-spec_*.json
 
 # ides
 .idea/
+/nbproject/private/
