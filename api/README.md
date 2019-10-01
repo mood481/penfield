@@ -32,5 +32,6 @@
 				</ul>
 			<li>Copy the code inside "src/index.ts" to "src/main.ts"</li>
 			<li>If you change names from archives or directories created by typeorm, remember to update main.ts, ormconfig.json</li>
+			<li></li>
 		</ul>
 </ul>
