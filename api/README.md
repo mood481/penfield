@@ -22,5 +22,15 @@
 		<a href="https://typeorm.io/#/" title="Typeorm website">Typeorm website</a></li>
 		<ul>
 			<li>Install all the dependences as specify on typeorm docs "node install --save typeorm", etc</li>
+			<li>Save your progress at the control version, you will need for next step</li>
+			<li>Install typeorm files with "typeorm init"</li>
+			<li>Some files have been changed, check them out with your saved ones to solve some problems</li>
+				<ul>
+					<li>package.json -> start script changed</li>
+					<li>.gitignore -> some ignores disappeard</li>
+					<li>tsconfig.json -> lots of changes, from new version keep "lib: [...]" and "target:es6"</li>
+				</ul>
+			<li>Copy the code inside "src/index.ts" to "src/main.ts"</li>
+			<li>If you change names from archives or directories created by typeorm, remember to update main.ts, ormconfig.json</li>
 		</ul>
 </ul>
