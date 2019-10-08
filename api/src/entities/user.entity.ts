@@ -28,3 +28,17 @@ export class User extends BasePlainEntity{
     meta: any;
 
 }
+
+export abstract class UserData
+{
+    firstName: string;
+
+    lastName: string;
+
+    meta?: any;
+}
+
+export abstract class UserEmail
+{
+    email: string;
+}

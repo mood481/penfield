@@ -7,6 +7,15 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return this.appService.getHello();
+    return this.appService.getHello()
+    +'</br>'+this.appService.setUser()
+    +'</br>'+this.appService.viewUser();
+  }
+
+  setUser():string{
+    return this.appService.setUser();
+  }
+  async viewUser():Promise<String>{
+    return await this.appService.viewUser();
   }
 }
