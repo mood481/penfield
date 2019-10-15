@@ -32,6 +32,16 @@
 				</ul>
 			<li>Copy the code inside "src/index.ts" to "src/main.ts"</li>
 			<li>If you change names from archives or directories created by typeorm, remember to update main.ts, ormconfig.json</li>
-			<li></li>
+			<li>Create all entities you will need. For example:</li>
+<pre>
+                      one-to-one    one-to-many     many to many
+            user_role------------user------------post------------category
+                                 |                  |
+            mainUser:one to many |                  |many to many
+                event------------|                  |------------file
+         invitedUser:many to many                   |
+                                                    |many-to-one
+                                                    |------------postType
+</pre>
 		</ul>
 </ul>

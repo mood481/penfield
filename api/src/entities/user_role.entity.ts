@@ -1,12 +1,12 @@
-import {Column, Entity, OneToMany} from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 
-import {User} from './user.entity';
-import {BaseCoreEntity} from './domain/base-core.entity';
+import { User } from './user.entity';
+import { BaseCoreEntity } from './domain/base-core.entity';
 
 @Entity()
-export class UserRole extends BaseCoreEntity{
+export class UserRole extends BaseCoreEntity {
 
-    @Column({unique: true, type: 'smallint'})
+    @Column({ unique: true, type: 'smallint' })
     level: number;
 
     @Column()

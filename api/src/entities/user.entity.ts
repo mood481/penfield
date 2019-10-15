@@ -1,10 +1,11 @@
-import {Column, Entity, ManyToOne} from "typeorm";
+import { Column, Entity, ManyToOne, ManyToMany } from "typeorm";
 
-import {UserRole} from "./user_role.entity";
-import {BasePlainEntity} from "./domain/base-plain.entity";
+import { UserRole } from "./user_role.entity";
+import { BasePlainEntity } from "./domain/base-plain.entity";
+import { Events } from "./events.entity";
 
 @Entity()
-export class User extends BasePlainEntity{
+export class User extends BasePlainEntity {
 
     @Column()
     firstName: string;
@@ -12,25 +13,30 @@ export class User extends BasePlainEntity{
     @Column()
     lastName: string;
 
-    @Column({unique: true})
+    @Column({ unique: true })
     email: string;
 
-    @Column({nullable: true})
+    @Column({ nullable: true })
     password: string;
 
-    @Column({default: false})
+    @Column({ default: false })
     isBlocked: boolean;
 
     @ManyToOne(type => UserRole, role => role.users)
     role: UserRole;
 
-    @Column({type: 'simple-json', default: null})
+    @ManyToOne(type => Events, event => event.mainUser)
+    myEvents: Event[];
+
+    @ManyToMany(type => Events, event => event.invitedUsers)
+    invitedEvents: Event[];
+
+    @Column({ type: 'simple-json', default: null })
     meta: any;
 
 }
 
-export abstract class UserData
-{
+export abstract class UserData {
     firstName: string;
 
     lastName: string;
@@ -38,7 +44,6 @@ export abstract class UserData
     meta?: any;
 }
 
-export abstract class UserEmail
-{
+export abstract class UserEmail {
     email: string;
 }
