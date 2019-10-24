@@ -26,6 +26,4 @@ export class Post extends BasePlainEntity {
     @ManyToOne(type => PostType, postType => postType.posts)
     postType = PostType;
 
-
-
 }

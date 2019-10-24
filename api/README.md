@@ -44,4 +44,18 @@
                                                     |------------postType
 </pre>
 		</ul>
+	<li>Create modules for all the classes which interact with the user. Separate them on different folders.</li>
+		<ul>
+		    <li>src/user/user.module.ts => Main file of the module. Relate functions with classes. Import it at app.module.ts</li>
+		    <li>src/user/user.controller.ts => Endpoints file. Specify wich endpoints(inputs and outputs) will be used at this module and what to do.</li>
+		    	<ul>
+		    	    <li>@Get() => Asks to read from the database. Returns a json with the info.</li>
+		    	    <li>@Post() => Asks to create a tuple at the database.</li>
+		    	    <li>@Put() => Asks to update a tuple at the database.</li>
+		    	    <li>@Delete() => Asks to delete a tuple from the database.</li>
+					<li>You can check endpoints using a HTTP Request app like Postman.</li>
+		    	</ul>
+		    <li>src/user/user.service.ts => Business logic file. Prepare the petitions and send then to the corresponding repository method</li>
+		    <li>src/common/repos/user.repository.ts => Database manager file. Connects with the database and interact with it. </li>
+		</ul>
 </ul>
