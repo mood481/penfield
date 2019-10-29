@@ -1,6 +1,6 @@
 import { Column, Entity, ManyToMany, JoinTable } from 'typeorm';
 
-import { Post } from './post.entity';
+import { Posts } from './post.entity';
 import { BasePlainEntity } from './domain/base-plain.entity';
 
 @Entity()
@@ -14,8 +14,8 @@ export class Archive extends BasePlainEntity {
     @Column({ unique: true })
     location: string;
 
-    @ManyToMany(type => Post, post => post.files)
+    @ManyToMany(type => Posts, post => post.files)
     @JoinTable()
-    posts: Post[];
+    posts: Posts[];
 
 }

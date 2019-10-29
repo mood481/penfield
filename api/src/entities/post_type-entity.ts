@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany } from 'typeorm';
 
-import { Post } from './post.entity';
+import { Posts } from './post.entity';
 import { BaseCoreEntity } from './domain/base-core.entity';
 
 
@@ -9,7 +9,7 @@ export class PostType extends BaseCoreEntity {
     @Column({ unique: true })
     name: string;
 
-    @OneToMany(type => Post, post => post.postType)
-    posts: Post[];
+    @OneToMany(type => Posts, post => post.postType)
+    posts: Posts[];
 
 }

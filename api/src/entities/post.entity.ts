@@ -6,7 +6,7 @@ import { PostType } from './post_type-entity';
 import { Archive } from './archive.entity';
 
 @Entity()
-export class Post extends BasePlainEntity {
+export class Posts extends BasePlainEntity {
     @Column()
     title: string;
 
